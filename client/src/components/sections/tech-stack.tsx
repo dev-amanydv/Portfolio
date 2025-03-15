@@ -4,18 +4,18 @@ import { SiReact, SiNextdotjs, SiNodedotjs, SiCloudflare, SiMongodb,
          SiPostgresql, SiHono } from "react-icons/si";
 
 const technologies = [
-  { icon: SiReact, name: "React" },
-  { icon: SiNextdotjs, name: "Next.js" },
-  { icon: SiNodedotjs, name: "Node.js" },
-  { icon: SiCloudflare, name: "Cloudflare Workers" },
-  { icon: SiHono, name: "Hono" },
-  { icon: SiMongodb, name: "MongoDB" },
-  { icon: SiPrisma, name: "Prisma" },
-  { icon: SiTypescript, name: "TypeScript" },
-  { icon: SiJavascript, name: "JavaScript" },
-  { icon: SiCss3, name: "CSS" },
-  { icon: SiTailwindcss, name: "Tailwind CSS" },
-  { icon: SiPostgresql, name: "PostgreSQL" }
+  { icon: SiReact, name: "React", color: "#61DAFB" },
+  { icon: SiNextdotjs, name: "Next.js", color: "#000000" },
+  { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
+  { icon: SiCloudflare, name: "Cloudflare Workers", color: "#F38020" },
+  { icon: SiHono, name: "Hono", color: "#34E0A1" },
+  { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+  { icon: SiPrisma, name: "Prisma", color: "#2D3748" },
+  { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
+  { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
+  { icon: SiCss3, name: "CSS", color: "#1572B6" },
+  { icon: SiTailwindcss, name: "Tailwind CSS", color: "#06B6D4" },
+  { icon: SiPostgresql, name: "PostgreSQL", color: "#4169E1" }
 ];
 
 export function TechStack() {
@@ -43,7 +43,10 @@ export function TechStack() {
               className="group"
             >
               <div className="flex flex-col items-center p-6 rounded-lg bg-[#0A192F] border border-[#233554] hover:border-[#64FFDA] transition-colors">
-                <tech.icon className="w-12 h-12 text-[#8892B0] group-hover:text-[#64FFDA] transition-colors" />
+                <tech.icon 
+                  className="w-12 h-12 transition-colors duration-300" 
+                  style={{ color: tech.color }}
+                />
                 <span className="mt-4 text-[#8892B0] group-hover:text-[#64FFDA] font-mono text-sm">
                   {tech.name}
                 </span>
