@@ -9,7 +9,6 @@ import { insertContactMessageSchema } from "@shared/schema";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { Github, Linkedin, Twitter } from "lucide-react";
 
 export function Contact() {
   const { toast } = useToast();
@@ -53,7 +52,7 @@ export function Contact() {
         className="max-w-2xl mx-auto text-center"
       >
         <h2 className="text-3xl font-bold mb-12 flex items-center justify-center">
-          <span className="text-[#64FFDA] font-mono mr-2">04.</span>
+          <span className="text-primary font-mono mr-2">04.</span>
           Get In Touch
         </h2>
 
@@ -68,7 +67,7 @@ export function Contact() {
                   <FormControl>
                     <Input
                       {...field}
-                      className="bg-[#0A192F] border-[#233554]"
+                      className="bg-card border-border"
                       placeholder="John Doe"
                     />
                   </FormControl>
@@ -87,7 +86,7 @@ export function Contact() {
                     <Input
                       {...field}
                       type="email"
-                      className="bg-[#0A192F] border-[#233554]"
+                      className="bg-card border-border"
                       placeholder="john@example.com"
                     />
                   </FormControl>
@@ -105,7 +104,7 @@ export function Contact() {
                   <FormControl>
                     <Textarea
                       {...field}
-                      className="bg-[#0A192F] border-[#233554]"
+                      className="bg-card border-border"
                       placeholder="Your message here..."
                       rows={6}
                     />
@@ -118,45 +117,12 @@ export function Contact() {
             <Button
               type="submit"
               disabled={mutation.isPending}
-              className="bg-transparent border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10"
+              className="bg-transparent border-primary text-primary hover:bg-primary/10"
             >
               {mutation.isPending ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </Form>
-
-        <div className="flex justify-center gap-6 mt-12">
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#CCD6F6] hover:text-[#64FFDA]"
-            >
-              <Github className="h-6 w-6" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#CCD6F6] hover:text-[#64FFDA]"
-            >
-              <Linkedin className="h-6 w-6" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#CCD6F6] hover:text-[#64FFDA]"
-            >
-              <Twitter className="h-6 w-6" />
-            </a>
-          </Button>
-        </div>
       </motion.div>
     </section>
   );

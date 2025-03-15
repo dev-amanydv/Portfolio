@@ -1,5 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 export function Hero() {
   const x = useMotionValue(0);
@@ -76,13 +77,37 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
+          className="flex gap-4"
         >
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary/10"
-          >
-            Check out my work!
+          <Button variant="ghost" size="icon" asChild>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary"
+            >
+              <Github className="h-6 w-6" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary"
+            >
+              <Twitter className="h-6 w-6" />
+            </a>
           </Button>
         </motion.div>
       </div>
