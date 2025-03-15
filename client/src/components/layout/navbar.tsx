@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -40,6 +41,7 @@ export function Navbar() {
               {item.label}
             </motion.a>
           ))}
+          <ThemeToggle />
           <Button variant="outline" className="border-[#64FFDA] text-[#64FFDA]">
             Resume
           </Button>
@@ -64,6 +66,7 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
+              <ThemeToggle />
               <Button variant="outline" className="border-[#64FFDA] text-[#64FFDA]">
                 Resume
               </Button>
