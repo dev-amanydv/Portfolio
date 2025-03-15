@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const projects = [
   {
@@ -9,14 +10,16 @@ const projects = [
     description: "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
     tech: ["React", "Node.js", "Spotify API"],
     github: "https://github.com",
-    external: "https://example.com"
+    external: "https://example.com",
+    image: "https://placehold.co/600x400/0A192F/64FFDA?text=Spotify+Visualizer"
   },
   {
     title: "Project Two",
     description: "A minimal, dark theme template for VS Code, Sublime Text, Atom, iTerm, and more.",
     tech: ["VS Code", "Sublime Text", "Atom"],
     github: "https://github.com",
-    external: "https://example.com"
+    external: "https://example.com",
+    image: "https://placehold.co/600x400/0A192F/64FFDA?text=Theme+Template"
   }
 ];
 
@@ -43,7 +46,14 @@ export function Projects() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
             >
-              <Card className="bg-[#0A192F] border-[#233554] h-full">
+              <Card className="bg-[#0A192F] border-[#233554] h-full overflow-hidden">
+                <AspectRatio ratio={3/2} className="bg-[#1E293B]">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  />
+                </AspectRatio>
                 <CardHeader>
                   <CardTitle className="text-[#CCD6F6]">{project.title}</CardTitle>
                 </CardHeader>
