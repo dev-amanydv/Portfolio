@@ -39,7 +39,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-[#64FFDA] font-mono mb-4"
+          className="text-primary font-mono mb-4"
         >
           Hi, my name is
         </motion.p>
@@ -48,7 +48,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-5xl md:text-7xl font-bold text-[#CCD6F6] mb-4"
+          className="text-5xl md:text-7xl font-bold text-foreground mb-4"
         >
           John Doe.
         </motion.h1>
@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-4xl md:text-6xl font-bold text-[#8892B0] mb-6"
+          className="text-4xl md:text-6xl font-bold text-muted-foreground mb-6"
         >
           I build things for the web.
         </motion.h2>
@@ -66,7 +66,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-[#8892B0] text-lg mb-12 max-w-xl"
+          className="text-muted-foreground text-lg mb-12 max-w-xl"
         >
           I'm a software engineer specializing in building exceptional digital experiences.
           Currently focused on building accessible, human-centered products.
@@ -80,7 +80,7 @@ export function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10"
+            className="border-primary text-primary hover:bg-primary/10"
           >
             Check out my work!
           </Button>
@@ -97,8 +97,8 @@ export function Hero() {
           rotateY,
         }}
       >
-        <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-[#64FFDA]/20 to-[#0A192F] p-1">
-          <div className="w-full h-full rounded-2xl bg-[#0A192F] p-4 backdrop-blur-sm border border-[#233554]">
+        <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-background p-1">
+          <div className="w-full h-full rounded-2xl bg-card p-4 backdrop-blur-sm border border-border">
             <img
               src="https://placehold.co/400x400/0A192F/64FFDA?text=JD"
               alt="John Doe"
