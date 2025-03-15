@@ -34,7 +34,7 @@ export function Experience() {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-3xl font-bold mb-12 flex items-center">
-          <span className="text-[#64FFDA] font-mono mr-2">02.</span>
+          <span className="text-[#64FFDA] font-mono mr-2">03.</span>
           Where I've Worked
         </h2>
 

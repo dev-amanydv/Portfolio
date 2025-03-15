@@ -1,10 +1,40 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["17.5deg", "-17.5deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-17.5deg", "17.5deg"]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const width = rect.width;
+    const height = rect.height;
+
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
-    <section className="min-h-screen flex items-center pt-16">
-      <div className="max-w-3xl">
+    <section className="min-h-screen flex items-center justify-between pt-16 gap-8">
+      <div className="max-w-2xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,6 +86,27 @@ export function Hero() {
           </Button>
         </motion.div>
       </div>
+
+      <motion.div
+        className="hidden lg:block relative"
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          transformStyle: "preserve-3d",
+          rotateX,
+          rotateY,
+        }}
+      >
+        <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-[#64FFDA]/20 to-[#0A192F] p-1">
+          <div className="w-full h-full rounded-2xl bg-[#0A192F] p-4 backdrop-blur-sm border border-[#233554]">
+            <img
+              src="https://placehold.co/400x400/0A192F/64FFDA?text=JD"
+              alt="John Doe"
+              className="w-full h-full object-cover rounded-xl"
+            />
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

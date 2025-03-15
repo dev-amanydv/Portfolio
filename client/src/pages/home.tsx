@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/navbar";
 import { Hero } from "@/components/sections/hero";
+import { TechStack } from "@/components/sections/tech-stack";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="container mx-auto px-6">
         <Hero />
         <About />
+        <TechStack />
         <Experience />
         <Projects />
         <Contact />
