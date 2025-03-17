@@ -6,20 +6,20 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
+    title: "Taskify",
+    description: "Taskify - Stay organized effortlessly with my To-Do web app! Add, track, and manage your tasks seamlessly with a clean and intuitive interface.",
     tech: ["React", "Node.js", "Spotify API"],
     github: "https://github.com",
     external: "https://example.com",
-    image: "https://placehold.co/600x400/0A192F/64FFDA?text=Spotify+Visualizer"
+    image: "https://placehold.co/600x800/0A192F/64FFDA?text=Taskify"
   },
   {
-    title: "Project Two",
-    description: "A minimal, dark theme template for VS Code, Sublime Text, Atom, iTerm, and more.",
+    title: "DevDairies",
+    description: "DevDiaries – A blog sharing a developer’s journey, insights, and experiences in coding, learning, and building.",
     tech: ["VS Code", "Sublime Text", "Atom"],
     github: "https://github.com",
     external: "https://example.com",
-    image: "https://placehold.co/600x400/0A192F/64FFDA?text=Theme+Template"
+    image: "https://placehold.co/600x400/0A192F/64FFDA?text=DevDairies"
   }
 ];
 

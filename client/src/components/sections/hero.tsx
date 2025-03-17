@@ -51,7 +51,7 @@ export function Hero() {
           transition={{ delay: 0.3 }}
           className="text-5xl md:text-7xl font-bold text-foreground mb-4"
         >
-          John Doe.
+          Aman Yadav.
         </motion.h1>
 
         <motion.h2
@@ -69,8 +69,8 @@ export function Hero() {
           transition={{ delay: 0.5 }}
           className="text-muted-foreground text-lg mb-12 max-w-xl"
         >
-          I'm a software engineer specializing in building exceptional digital experiences.
-          Currently focused on building accessible, human-centered products.
+          I’m a Full-Stack Developer specializing in both front-end and back-end development 
+          to create seamless, scalable, and high-performance web applications. 
         </motion.p>
 
         <motion.div
@@ -79,9 +79,9 @@ export function Hero() {
           transition={{ delay: 0.6 }}
           className="flex gap-4"
         >
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="secondary" size="sm" asChild>
             <a
-              href="https://github.com"
+              href="https://github.com/dev-amanydv"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary"
@@ -89,9 +89,9 @@ export function Hero() {
               <Github className="h-6 w-6" />
             </a>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="secondary" size="icon" asChild>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/devamanydv"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary"
@@ -99,9 +99,9 @@ export function Hero() {
               <Linkedin className="h-6 w-6" />
             </a>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
+          <Button variant="secondary" size="icon" asChild>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/dev_amanydv"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary"
@@ -125,7 +125,7 @@ export function Hero() {
         <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-primary/20 to-background p-1">
           <div className="w-full h-full rounded-2xl bg-card p-4 backdrop-blur-sm border border-border">
             <img
-              src="https://placehold.co/400x400/0A192F/64FFDA?text=JD"
+              src="/src/assets/dp.jpeg"
               alt="John Doe"
               className="w-full h-full object-cover rounded-xl"
             />

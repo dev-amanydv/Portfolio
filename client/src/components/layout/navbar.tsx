@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
+  // { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -24,7 +24,7 @@ export function Navbar() {
     >
       <nav className="container mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/">
-          <a className="text-primary font-mono text-xl">JD</a>
+          <a className="text-primary font-mono text-xl">AY</a>
         </Link>
 
         {/* Desktop Navigation */}
@@ -43,7 +43,12 @@ export function Navbar() {
           ))}
           <ThemeToggle />
           <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
-            Resume
+          <a
+            href="../src/assets/reciept.pdf"
+            download="Aman_Yadav_Resume.pdf"
+          >
+           Resume
+          </a>
           </Button>
         </div>
 
@@ -68,7 +73,12 @@ export function Navbar() {
               ))}
               <ThemeToggle />
               <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                Resume
+              <a
+                href="../src/assets/reciept.pdf"
+                download="Aman_Yadav_Resume.pdf"
+              >
+                Download Resume
+              </a>
               </Button>
             </div>
           </SheetContent>
